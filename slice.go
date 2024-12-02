@@ -44,4 +44,38 @@ func main() {
 	fmt.Println(daySlice1)
 	fmt.Println(daySlice2)
 	fmt.Println(days)
+
+	// Length and Capacity
+	var newSlice []string = make([]string, 2, 5)
+	newSlice[0] = "Afif"
+	newSlice[1] = "Tri"
+
+	fmt.Println(newSlice)
+	fmt.Println(len(newSlice)) //length
+	fmt.Println(cap(newSlice)) //capacity
+
+	newSlice2 := append(newSlice, "Rina")
+	fmt.Println(newSlice2)
+	fmt.Println(len(newSlice2))
+	fmt.Println(cap(newSlice2))
+
+	newSlice2[0] = "Udin"
+	fmt.Println(newSlice2)
+	fmt.Println(newSlice)
+
+	// Copy Slice
+	fromSlice := days[:3]
+	toSlice := make([]string, len(fromSlice), cap(fromSlice))
+
+	copy(toSlice, fromSlice)
+
+	fmt.Println(fromSlice)
+	fmt.Println(toSlice)
+
+	// Membedakan Array dan Slice
+	iniArray := [...]int{1, 2, 3, 4}
+	iniSlice := []int{1, 2, 3, 4}
+
+	fmt.Println(iniArray)
+	fmt.Println(iniSlice)
 }

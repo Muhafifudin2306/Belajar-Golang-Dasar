@@ -21,4 +21,16 @@ func main() {
 	case false:
 		fmt.Println("Nama sudah benar")
 	}
+
+	length := len(name)
+
+	switch {
+	case length > 5:
+		fmt.Println("Nama too long")
+	case length < 4:
+		fmt.Println("Nama sudah benar")
+	default:
+		fmt.Println("Nama sudah benar")
+	}
+
 }
